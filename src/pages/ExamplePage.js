@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Helmet} from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
-import Header from '.././components/Header';
 import { Card, CardContent } from '@material-ui/core';
+import { get } from '.././FetchUtils';
+import { map } from 'lodash';
+import Header from '.././components/Header';
 import './ExamplePage.scss';
 
 const getEx =
@@ -12,7 +14,37 @@ const getEx =
     });
 `;
 
+const getCode =
+`
+import { map } from 'lodash';
+import { get } from '.././FetchUtils';
+
+...
+
+// Fetch data in useEffect
+get('https://cat-fact.herokuapp.com/facts')
+    .then((result) => {
+        // Use State Hook
+        setCatFacts(result);
+    });
+
+...
+
+map(CatFacts, (catFact) => <li key={catFact._id}>{catFact.text}</li>)
+
+`;
+
 const ExamplePage = () => {
+
+    const [CatFacts, setCatFacts] = useState({});
+
+    useEffect(() => {
+        get('https://cat-fact.herokuapp.com/facts')
+            .then((result) => {
+                setCatFacts(result);
+            });
+    }, []);
+
     return (
         <Container id="ExamplePage--Container">
             <Helmet>
@@ -66,6 +98,24 @@ const ExamplePage = () => {
                             <div><pre><code>
                             {getEx}
                             </code></pre></div>
+                        </CardContent>
+                    </Card>
+                </Col>
+            </Row>
+            <Row>
+                <Col xs={12}>
+                    <Card variant='outlined' className='Card'>
+                        <CardContent>
+                            <h3>Fetch Example</h3>
+                            <p>The following cat facts are pulled from the <a href='https://cat-fact.herokuapp.com/' target='_blank' rel="no-referrer noreferrer">Cat Facts API</a> and entries are iterated through to render each fact to a list-item using the <code>get</code> function in <a href='https://github.com/christopherrobin/React-Starter-Pack/blob/main/src/FetchUtils.js' target='_blank' rel="no-referrer noreferrer">FetchUtils.js</a></p>
+                            <ul>
+                                {
+                                    map(CatFacts, (catFact) => <li key={catFact._id}>{catFact.text}</li>)
+                                }
+                            </ul>
+                            <hr />
+                            <h3>Implementation</h3>
+                            <code><pre>{getCode}</pre></code>
                         </CardContent>
                     </Card>
                 </Col>

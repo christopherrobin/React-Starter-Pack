@@ -5,7 +5,7 @@ import { Container } from 'reactstrap';
 import Fade from './components/Fade';
 import LandingPage from './pages/LandingPage';
 import Examples from './pages/ExamplePage';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 import './App.scss';
 import './components/Fade.scss';
@@ -29,7 +29,6 @@ const App = () => {
             </Route>
           </Switch>
         </Router>
-        <Footer />
       </div>
     </Container>
   );

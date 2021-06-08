@@ -10,7 +10,7 @@ const Header = ({pageTitle}) => {
                 <Col xs={12}>
                     <h1>React-Starter-Pack</h1>
                     <div>
-                        On <a href='https://github.com/christopherrobin/React-Starter-Pack' target='_blank' rel="no-referrer noreferrer">GitHub</a> by christopherrobin
+                        Fork it on <a href='https://github.com/christopherrobin/React-Starter-Pack' target='_blank' rel="no-referrer noreferrer">GitHub</a>
                     </div>
                     <h2>{pageTitle}</h2>
                     <ul>
