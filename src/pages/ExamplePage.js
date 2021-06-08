@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {Helmet} from 'react-helmet';
 import { Container, Row, Col } from 'reactstrap';
 import { Card, CardContent } from '@material-ui/core';
+import Alert from '@material-ui/lab/Alert';
 import { get } from '.././FetchUtils';
 import { map } from 'lodash';
 import Header from '.././components/Header';
@@ -108,11 +109,18 @@ const ExamplePage = () => {
                         <CardContent>
                             <h3>Fetch Example</h3>
                             <p>The following cat facts are pulled from the <a href='https://cat-fact.herokuapp.com/' target='_blank' rel="no-referrer noreferrer">Cat Facts API</a> and entries are iterated through to render each fact to a list-item using the <code>get</code> function in <a href='https://github.com/christopherrobin/React-Starter-Pack/blob/main/src/FetchUtils.js' target='_blank' rel="no-referrer noreferrer">FetchUtils.js</a></p>
-                            <ul>
-                                {
-                                    map(CatFacts, (catFact) => <li key={catFact._id}>{catFact.text}</li>)
-                                }
-                            </ul>
+                            <Choose>
+                                <When condition={ CatFacts === undefined }>
+                                    <Alert style={{ marginBottom: '1em' }} severity="error">There was an error retrieving facts about cats.</Alert>
+                                </When>
+                                <Otherwise>
+                                    <ul>
+                                        {
+                                            map(CatFacts, (catFact) => <li key={catFact._id}>{catFact.text}</li>)
+                                        }
+                                    </ul>
+                                </Otherwise>
+                            </Choose>
                             <hr />
                             <h3>Implementation</h3>
                             <code><pre>{getCode}</pre></code>
