@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
+    "eslint-plugin-jsx-control-statements": "^2.2.1",
     "lodash": "^4.17.21",
     "node-sass": "^4.14.1",
     "query-string": "^7.0.0",
@@ -23,15 +24,19 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "plugins": [
+      "jsx-control-statements"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jsx-control-statements/recommended"
     ],
     "rules": {
       "quotes": [
@@ -44,6 +49,12 @@
       "semi": [
         2,
         "always"
+      ],
+      "react/jsx-no-undef": [
+        2,
+        {
+          "allowGlobals": true
+        }
       ]
     }
   },
@@ -58,5 +69,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-jsx-control-statements": "^4.1.0",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.1.8"
   }
 }

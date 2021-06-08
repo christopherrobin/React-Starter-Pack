@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Header from '.././components/Header';
 
 test('renders GitHub link', () => {
-  render(<App />);
+  render(<Header />);
   const linkElement = screen.getByText(/GitHub/i);
   expect(linkElement).toBeInTheDocument();
 });
