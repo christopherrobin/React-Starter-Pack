@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "eslint-plugin-jsx-control-statements": "^2.2.1",
+    "eslint-plugin-prettier": "^3.4.0",
     "lodash": "^4.17.21",
     "node-sass": "^4.14.1",
     "query-string": "^7.0.0",
@@ -27,18 +28,28 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lintfix": "eslint --fix ."
   },
   "eslintConfig": {
     "plugins": [
-      "jsx-control-statements"
+      "jsx-control-statements",
+      "prettier"
     ],
     "extends": [
       "react-app",
       "react-app/jest",
-      "plugin:jsx-control-statements/recommended"
+      "plugin:jsx-control-statements/recommended",
+      "prettier"
     ],
     "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true
+        }
+      ],
       "quotes": [
         2,
         "single",
@@ -73,6 +84,9 @@
   "devDependencies": {
     "babel-plugin-jsx-control-statements": "^4.1.0",
     "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.1.8"
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.1",
+    "react-app-rewired": "^2.1.8",
+    "typescript": "^4.3.2"
   }
 }

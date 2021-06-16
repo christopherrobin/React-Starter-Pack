@@ -1,8 +1,9 @@
 # React-Starter-Pack
 
-This is my custom React Starter Pack, a constantly evolving collection of my favorite tools ready to be used to jump-start a new project. 
+This is my custom React Starter Pack, a constantly evolving collection of my favorite tools ready to be used to jump-start a new project.
 
-Default tooling includes: 
+Default tooling includes:
+
 - Custom fetch and cookie management utility functions
 - Custom ESLint configuration
 - Custom Babel configuration without ejecting
@@ -11,11 +12,11 @@ Default tooling includes:
 - SASS
 - Jest
 - Lodash
-- React-Helmet 
+- React-Helmet
 - Project initializes with 2 pages and a minimalist react-router-dom navigational example
 
-
 ## :beer: Donate
+
 I do this in my spare time because I love React but if you want to donate a beer or coffee I appreciate it!
 
 **Bitcoin (BTC)**: `3CysFL4oE7v2Qq1SF6S7Hq1pGu9n9XGBxW`

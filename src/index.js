@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.Fragment>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-        <App />
+      <App />
     </ThemeProvider>
   </React.Fragment>,
   document.getElementById('root')
