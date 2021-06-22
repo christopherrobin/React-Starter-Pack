@@ -18,6 +18,15 @@
     "rules": {
         "semi": ["error", "always"],
         "quotes": ["error", "single"],
-        "indent": ["error", "tab"]
+        "indent": ["error", "tab"],
+        "max-len": [
+            "error", {
+                "code": 120,
+                "tabWidth": 4,
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true,
+                "ignoreRegExpLiterals": true
+            }]
     }
 }
