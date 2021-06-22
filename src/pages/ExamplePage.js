@@ -37,7 +37,7 @@ const ExamplePage = () => {
 	const [CatFacts, setCatFacts] = useState({});
 
 	useEffect(() => {
-		get('https://cat-fact.herokuapp.com/facts').then((result) => {
+		get('https://cat-fact.herokuapp.com/facts').then(result => {
 			setCatFacts(result);
 		});
 	}, []);
@@ -47,7 +47,7 @@ const ExamplePage = () => {
 			<Helmet>
 				<title>React-Starter-Pack - ExamplePage</title>
 			</Helmet>
-			<Header />
+			<Header/>
 			<Row>
 				<Col xs={12}>
 					<h1>Examples</h1>

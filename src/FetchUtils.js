@@ -1,4 +1,4 @@
-export const get = (url) => {
+export const get = url => {
 	const authHeader = 'Bearer - Token';
 
 	let myHeaders = new Headers();

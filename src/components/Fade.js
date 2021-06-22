@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './Fade.scss';
 
-const Fade = (props) => {
+const Fade = props => {
 	const [showMessage, setShowMessage] = useState(false);
 
 	useEffect(() => {

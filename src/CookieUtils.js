@@ -3,7 +3,7 @@ export const setCookie = (name, value, days = 7, path = '/') => {
 	document.cookie = `${name}=encodeURIComponent(${value}); expires=${expires}; path=${path}`;
 };
 
-export const getCookie = (name) => {
+export const getCookie = name => {
 	return document.cookie.split('; ').reduce((r, v) => {
 		const parts = v.split('=');
 		return parts[0] === name ? decodeURIComponent(parts[1]) : r;
