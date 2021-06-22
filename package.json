@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": false,
   "dependencies": {
+    "@babel/eslint-parser": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
     "@material-ui/core": "^4.11.1",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.58",
@@ -11,7 +13,6 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "eslint-plugin-jsx-control-statements": "^2.2.1",
-    "eslint-plugin-prettier": "^3.4.0",
     "lodash": "^4.17.21",
     "node-sass": "^4.14.1",
     "query-string": "^7.0.0",
@@ -34,40 +35,13 @@
   },
   "eslintConfig": {
     "plugins": [
-      "jsx-control-statements",
-      "prettier"
+      "jsx-control-statements"
     ],
     "extends": [
       "react-app",
       "react-app/jest",
-      "plugin:jsx-control-statements/recommended",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true
-        }
-      ],
-      "quotes": [
-        2,
-        "single",
-        {
-          "avoidEscape": true
-        }
-      ],
-      "semi": [
-        2,
-        "always"
-      ],
-      "react/jsx-no-undef": [
-        2,
-        {
-          "allowGlobals": true
-        }
-      ]
-    }
+      "plugin:jsx-control-statements/recommended"
+    ]
   },
   "browserslist": {
     "production": [
@@ -84,8 +58,7 @@
   "devDependencies": {
     "babel-plugin-jsx-control-statements": "^4.1.0",
     "customize-cra": "^1.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "prettier": "^2.3.1",
+    "eslint": "^7.29.0",
     "react-app-rewired": "^2.1.8",
     "typescript": "^4.3.2"
   }
