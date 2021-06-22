@@ -10,13 +10,13 @@ const Header = ({ pageTitle }) => {
 				<Col xs={12}>
 					<h1>React-Starter-Pack</h1>
 					<div>
-            Fork it on
+                        Fork it on&nbsp;
 						<a
 							href="https://github.com/christopherrobin/React-Starter-Pack"
 							target="_blank"
 							rel="no-referrer noreferrer"
 						>
-              GitHub
+                            GitHub
 						</a>
 					</div>
 					<h2>{pageTitle}</h2>

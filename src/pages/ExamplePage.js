@@ -90,9 +90,7 @@ const ExamplePage = () => {
 						<CardContent>
 							<h3>Delete Cookie</h3>
 							<div>CookieUtils.setCookie()</div>
-							<div>
-                Args: <code>name</code>, <code>path</code>
-							</div>
+							<div>Args: <code>name</code>, <code>path</code></div>
 							<div>
 								<pre>
 									<code>deleteCookie('cookie-name', '/');</code>
@@ -106,9 +104,7 @@ const ExamplePage = () => {
 						<CardContent>
 							<h3>GET (Fetch)</h3>
 							<div>FetchUtils.get()</div>
-							<div>
-                Args: <code>url</code>
-							</div>
+							<div>Args: <code>url</code></div>
 							<div>
 								<pre>
 									<code>{getEx}</code>
@@ -123,28 +119,29 @@ const ExamplePage = () => {
 					<Card variant="outlined" className="Card">
 						<CardContent>
 							<h3>Fetch Example</h3>
-							<p>The following cat facts are pulled from the
+							<p>The following cat facts are pulled from the&nbsp;
 								<a
 									href="https://cat-fact.herokuapp.com/"
 									target="_blank"
 									rel="no-referrer noreferrer"
 								>
-                  Cat Facts API
+                                    Cat Facts API
 								</a>
-                and entries are iterated through to render each fact to a
-                list-item using the <code>get</code> function in
+                                &nbsp;.
+							</p>
+							<p>Entries are iterated through to render each fact to a list-item using the&nbsp;
+								<code>get</code> function in&nbsp;
 								<a
 									href="https://github.com/christopherrobin/React-Starter-Pack/blob/main/src/FetchUtils.js"
 									target="_blank"
 									rel="no-referrer noreferrer"
 								>
-                  FetchUtils.js
-								</a>
-							</p>
+                                    FetchUtils.js
+								</a>.</p>
 							<Choose>
 								<When condition={CatFacts === undefined}>
 									<Alert style={{ marginBottom: '1em' }} severity="error">
-                    There was an error retrieving facts about cats.
+                                        There was an error retrieving facts about cats.
 									</Alert>
 								</When>
 								<Otherwise>
