@@ -74,9 +74,7 @@ const ExamplePage = () => {
 						<CardContent>
 							<h3>Get Cookie</h3>
 							<div>CookieUtils.getCookie()</div>
-							<div>
-                Args: <code>name</code>
-							</div>
+							<div>Args: <code>name</code></div>
 							<div>
 								<pre>
 									<code>getCookie('cookie-name');</code>
