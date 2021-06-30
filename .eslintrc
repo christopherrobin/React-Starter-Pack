@@ -29,6 +29,13 @@
         "arrow-spacing": ["warn", { "before": true, "after": true }],
         "space-infix-ops": ["warn"],
         "no-trailing-spaces": ["warn"],
+		"no-unused-vars": [
+			"warn",
+			{
+				// Ignore title case vars not used
+				"varsIgnorePattern": "^[A-Z]"
+			}
+		],
         "max-len": [
             "error", {
                 "code": 120,
