@@ -1,7 +1,12 @@
 {
     "env": {
-        "browser": true
+        "browser": true,
+        "node": true,
+        "es6": true
     },
+	"ignorePatterns": [
+		"**/build/**"
+	],
     "parser": "@babel/eslint-parser",
     "parserOptions": {
         "ecmaVersion": 6,
@@ -16,14 +21,14 @@
         }
     },
     "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "single"],
-        "indent": ["error", "tab"],
-        "no-multi-spaces": ["error"],
+		"semi": ["warn", "always"],
+        "quotes": ["warn", "single"],
+        "indent": ["warn", "tab"],
+        "no-multi-spaces": ["warn"],
         "arrow-parens": ["warn", "as-needed"],
         "arrow-spacing": ["warn", { "before": true, "after": true }],
         "space-infix-ops": ["warn"],
-        "no-trailing-spaces": ["error"],
+        "no-trailing-spaces": ["warn"],
         "max-len": [
             "error", {
                 "code": 120,
