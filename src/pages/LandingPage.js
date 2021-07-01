@@ -22,7 +22,7 @@ P3
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { round } from 'lodash';
+import { round, orderBy } from 'lodash';
 import { Container, Row, Col } from 'reactstrap';
 import Fade from '.././components/Fade';
 import Header from '.././components/Header';
@@ -42,21 +42,21 @@ const LandingPage = () => {
 		};
 		if (isBuy) {
 			const newArray = [...totalBuys, newTransaction];
-			setTotalBuys(newArray);
+			setTotalBuys(orderBy(newArray, 'price', 'desc'));
 		} else {
 			const newArray = [...totalSells, newTransaction];
-			setTotalSells(newArray);
+			setTotalSells(orderBy(newArray, 'price', 'desc'));
 		}
 	};
 
 	return (
 		<Container id="LandingPage--Container">
 			<Helmet>
-				<title>React-Starter-Pack - Coinbase example</title>
+				<title>React-Starter-Pack - Transactions example</title>
 			</Helmet>
 			<Row>
 				<Col xs={12}>
-					<h1>Coinbase transactions example</h1>
+					<h1>Transactions example</h1>
 
 					<div id="buttons-container">
 						<Row>
