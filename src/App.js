@@ -14,7 +14,7 @@ const App = () => {
 		<Container id="app-container">
 			<Helmet>
 				<title>React-Starter-Pack</title>
-				<style>{'body { background-color: #F3F3F3; }'}</style>
+				<style>{'body { background-color: #000; }'}</style>
 				<meta name="description" content="React-Starter-Pack" />
 			</Helmet>
 			<div className="App">

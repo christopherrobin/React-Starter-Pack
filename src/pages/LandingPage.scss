@@ -1,4 +1,53 @@
 @import "../../src/variables.scss";
-/*
-#LandingPage--Container {}
-*/
+
+#LandingPage--Container {
+	background: #000;
+	color: #fff;
+	font-weight: 700;
+
+	h1 {
+		margin-top: 2em;
+
+	}
+	.price {
+		margin-left: 2em;
+	}
+
+	#buttons-container {
+		margin: 1em 0;
+
+		button#buy-button {
+			background: rgb(45,175,52);
+			color: #fff;
+			border: none;
+		}
+
+		button#sell-button {
+			background: rgb(250,103,45);
+			color: #fff;
+			border: none;
+		}
+
+	}
+	
+	#transactions-container {
+		text-align: center;
+
+		#showBuys {
+			border-top: 1px solid #fff;
+		}
+
+		#showBuys, #showSells {
+			padding: 1em;
+		}
+		
+		span.price.buys {
+			color: rgb(45,175,52);
+		}
+
+		span.price.sells {
+			color: rgb(250,103,45);
+		}
+
+	}
+}
