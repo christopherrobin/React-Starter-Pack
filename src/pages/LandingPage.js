@@ -86,7 +86,7 @@ const LandingPage = () => {
 					</div>
 					<div id="transactions-container">
 						<div id="showSells">
-							{totalSells.map((data) => (
+							{totalSells.map(data => (
 								<div key={data.id}>
 									<Fade
 										childComponent={
@@ -100,7 +100,7 @@ const LandingPage = () => {
 							))}
 						</div>
 						<div id="showBuys">
-							{totalBuys.map((data) => (
+							{totalBuys.map(data => (
 								<div key={data.id}>
 									<Fade
 										childComponent={
