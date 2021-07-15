@@ -13,6 +13,7 @@
 		"@testing-library/user-event": "^12.1.10",
 		"bootstrap": "^4.5.3",
 		"eslint-plugin-jsx-control-statements": "^2.2.1",
+		"faker": "^5.5.3",
 		"lodash": "^4.17.21",
 		"node-sass": "^4.14.1",
 		"query-string": "^7.0.0",
